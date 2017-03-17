@@ -64,7 +64,7 @@ html {
 }
 
 .aboutlink {
-     color: rgb(88, 147, 83);
+     color: rgb(223, 92, 28);
 
 }
 
@@ -199,7 +199,7 @@ text-align:center;
 }
 @media(min-width:1530px){
      #form{
-          height: auto;
+          height: 400px;
           width: 700px;
      }
 }
