@@ -27,7 +27,7 @@ $template = '<div style="padding:50px; color:white;">Hello ' . $name . ',<br/>'
 . 'We Will contact You as soon as possible .</div>';
 $sendmessage = "<div style=\"background-color:#7E7E7E; color:white;\">" . $template . "</div>";
 // Message lines should not exceed 70 characters (PHP rule), so wrap it.
-$sendmessage = wordwrap($sendmessage, 70);
+$sendmessage = wordwrap($sendmessage, 200);
 // Send mail by PHP Mail Function.
 mail("cmarshall72@gmail.com", $subject, $sendmessage, $headers);
 echo "Your Query has been received, We will contact you soon.";
