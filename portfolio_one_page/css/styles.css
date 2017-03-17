@@ -23,6 +23,7 @@ html {
 }
 /*banner*/
 .intro-section {
+
     height: 100%;
     padding-top: 15vh;
     text-align: center;
@@ -93,14 +94,13 @@ padding-top: 10vh;
 font-family: 'Josefin Sans', sans-serif;
 }
 #form{
+height: 60vh;
 border-radius:2px;
-padding:20px 30px;
+padding: 2% 5%;
 box-shadow:0 0 15px;
 font-size:14px;
 font-weight:bold;
-width:350px;
-margin:20px 250px 0 35px;
-float:left;
+width: 80vh;
 
 }
 h3{
@@ -118,7 +118,7 @@ padding:5px;
 input[type=button]{
 background-color:#123456;
 border:1px solid white;
-font-family: 'Josefin Sans', sans-serif;
+font-family: 'Fauna One', serif;
 font-Weight:bold;
 font-size:18px;
 color:white;
@@ -169,5 +169,36 @@ text-align:center;
 @media(max-width:768px){
      #about {
           overflow: auto;
+     }
+}
+@media(max-width:1500px){
+     #form{
+          height: auto;
+          width: auto;
+     }
+}
+@media(min-width:1500px){
+     #form{
+          height: auto;
+          width: 770px;
+     }
+}
+
+@media(min-width:1200px){
+     #form{
+          height: auto;
+          width: 550px;
+     }
+}
+@media(max-width:1184px){
+     #form{
+          height: auto;
+          width: auto;
+     }
+}
+@media(min-width:1530px){
+     #form{
+          height: auto;
+          width: 700px;
      }
 }
