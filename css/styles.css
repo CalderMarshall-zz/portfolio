@@ -27,12 +27,13 @@ html {
     height: 100%;
     padding-top: 15vh;
     text-align: center;
-    background: url("../../images/atl_sky_2.jpg");
+    background: url("../images/atl_sky_2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: white;
    font-family: 'Josefin Sans', sans-serif;
+
 }
 /*my picture*/
 #profile{
@@ -44,10 +45,10 @@ html {
 }
 /*about section*/
 .about-section {
-
+     border-top: 25px solid #5E3F0E;
     padding-top: 10vh;
     text-align: center;
-    background-color: #352706;
+    background-color: rgb(115, 147, 114);
     color: black;
     padding-bottom: 10vh;
     font-size: 1.5em;
@@ -56,10 +57,10 @@ html {
 }
 /*description paragraph*/
 .about-section #leftabout {
-     background-color: rgb(89, 73, 38);
+     background-color: rgb(147, 139, 89);
      padding: 8vh 2vh;
      border: 2px solid black;
-     border-radius: 8%;
+     border-radius: 5%;
 }
 
 .aboutlink {

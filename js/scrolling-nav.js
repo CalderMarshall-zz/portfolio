@@ -41,7 +41,6 @@ $(function() {
      $("#form")[0].reset(); // To reset form fields on success.
      }
      });
-     }
-     });
+}
      });
 });
