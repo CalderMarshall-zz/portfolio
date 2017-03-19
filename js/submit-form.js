@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	// whoosh sound when email is sent
+	var mailSound = document.getElementById('mailSound');
+		mailSound.src = '../sounds/mailsent.wav';
 	// send form data to php script with AJAX
 	$('#submit').click(function(event){
 		event.preventDefault();
@@ -7,20 +10,20 @@ $(document).ready(function() {
 		var message = $('#message').val();
 		var formData = {yourname: yourname, email: email, message: message};
 
-		if (yourname === "" ||  email === "" ||  message === ""){
+		if (yourname == '' || email == '' || message ==''){
 			$('#error-message').fadeIn().html('All fields are required');
 			setTimeout(function(){
 				$('#error-message').fadeOut('slow');
 			}, 4000);
 		}
 		else {
-			$('#error-message').html(' ');
+			$('#error-message').html('');
 			$.ajax({
 				type: 'POST',
 				url: '../mail.php',
 				data: formData,
 				success: function(response){
-					$('input[type=text], input[type=email], textarea').val(' ');
+					$('input[type=text], input[type=email], textarea').val('');
 					$('#success-message').fadeIn().html(response);
 					setTimeout(function(){
 						$('#success-message').fadeOut('slow');
@@ -28,17 +31,8 @@ $(document).ready(function() {
 
 				}
 			});
-
+			mailSound.play();
 		}
 		return false;
 	});
-	// input
-    $(".input-contact input, .textarea-contact textarea").focus(function () {
-        $(this).next("span").addClass("active");
-    });
-    $(".input-contact input, .textarea-contact textarea").blur(function () {
-        if ($(this).val() === "") {
-            $(this).next("span").removeClass("active");
-        }
-    });
 });
