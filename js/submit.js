@@ -7,7 +7,7 @@ $(document).ready(function() {
 		var message = $('#message').val();
 		var formData = {yourname: yourname, email: email, message: message};
 
-		if (yourname == ' ' || email == ' ' || message == ' '){
+		if (yourname === "" ||  email === "" ||  message === ""){
 			$('#error-message').fadeIn().html('All fields are required');
 			setTimeout(function(){
 				$('#error-message').fadeOut('slow');
@@ -32,4 +32,13 @@ $(document).ready(function() {
 		}
 		return false;
 	});
+	// input
+    $(".input-contact input, .textarea-contact textarea").focus(function () {
+        $(this).next("span").addClass("active");
+    });
+    $(".input-contact input, .textarea-contact textarea").blur(function () {
+        if ($(this).val() === "") {
+            $(this).next("span").removeClass("active");
+        }
+    });
 });
