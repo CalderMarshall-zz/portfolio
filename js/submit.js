@@ -7,23 +7,20 @@ $(document).ready(function() {
 		var message = $('#message').val();
 		var formData = {yourname: yourname, email: email, message: message};
 
-		if (yourname == '' || email == '' || message ==''){
+		if (yourname == ' ' || email == ' ' || message == ' '){
 			$('#error-message').fadeIn().html('All fields are required');
 			setTimeout(function(){
 				$('#error-message').fadeOut('slow');
 			}, 4000);
 		}
 		else {
-			$('#error-message').html('');
+			$('#error-message').html(' ');
 			$.ajax({
 				type: 'POST',
 				url: '../mail.php',
 				data: formData,
 				success: function(response){
-					$('input[type=text], input[type=email], textarea').val('');
-					// if (typeof $('.g-recaptcha') != 'undefined') {
-					// 	grecaptcha.reset();
-					// }
+					$('input[type=text], input[type=email], textarea').val(' ');
 					$('#success-message').fadeIn().html(response);
 					setTimeout(function(){
 						$('#success-message').fadeOut('slow');
