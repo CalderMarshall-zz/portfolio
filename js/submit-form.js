@@ -7,6 +7,7 @@ $(document).ready(function() {
 		var email = $('#email').val();
 		var message = $('#message').val();
 		var formData = {yourname: yourname, email: email, message: message};
+		console.log(formData);
 
 		if (yourname === "" || email === "" || message === ""){
 			$('#error-message').fadeIn().html('All fields are required');
@@ -21,8 +22,9 @@ $(document).ready(function() {
 				url: '../mail.php',
 				data: formData,
 				success: function(response){
-					$('input[type=text], input[type=email], textarea').val('');
+					$('input[type=text], input[type=email], textarea').val(' ');
 					$('#success-message').fadeIn().html(response);
+					console.log("success function");
 					setTimeout(function(){
 						$('#success-message').fadeOut('slow');
 					}, 5000);
