@@ -93,7 +93,7 @@
                 <div class="col-lg-12">
 
                      <h2>Calder Marshall</h2>
-                      <img id="profile" src="images/profpic1.jpg">
+
                     <p><strong>Full-Stack Web Developer based in Atlanta, GA.</strong></p>
 
                 </div>
@@ -110,8 +110,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div id="leftabout" class="col-lg-6">
+                         <img id="profile" src="images/profpic1.jpg">
                          <p class="chuck">Hi, I'm Calder.  I am a web-developer in training, currently attending an immersive coding bootcamp; <a class = "aboutlink" href="http://www.digitalcrafts.com">DigitalCrafts</a>, in Buckhead.  Becoming a full-stack engineer is what is important to me at the moment.  While I am not doing that, you can find me at one of Atlanta's many breweries, helping someone change their oil or headlight, at the Atlanta United game, or throwing darts and shooting pool.  I was born and raised in Atlanta, and have been here almost my whole life.  While I was not in Atlanta, I was pursuing a business degree at Auburn University.  After transferring from Auburn to the Mercer Atlanta Campus, I earned a Bachelor's in Business Administration in 2016.  My skill set is split between process and design.  Narrowing my focus may become a priority, but time will tell.</p>
-
                               <img class="abouticon" src="images/ballicon.png" alt="">
                               <img class="abouticon" src="images/caricon.png" alt="">
                               <img class="abouticon" src="images/vinylicon.png" alt="">
@@ -173,19 +173,18 @@
                     </div>
 
                          <div class="col-lg-6" id="mainform">
-                              <!-- Required Div Starts Here -->
-                              <form id="form">
-                              <h3>Contact Form</h3>
-                              <p id="returnmessage"></p>
-                              <label>Name: <span>*</span></label>
-                              <input type="text" id="name" placeholder="Name"/>
-                              <label>Email: <span>*</span></label>
-                              <input type="text" id="email" placeholder="Email"/>
-                              <label>Message:</label>
-                              <textarea id="message" placeholder="Message......."></textarea>
-                              <input type="button" id="submit" value="Send Message"/>
+                              <form method="post" enctype="multipart/form-data" class="contact">
+                              Name:<br>
+                              <input type="text" name="yourname" id="yourname" tabindex="1" required autofocus placeholder="Your Name"><br>
+                              E-mail:<br>
+                              <input type="email" name="email" id="email" tabindex="2" required placeholder="Your E-Mail"><br>
+                              Comment:<br>
+                              <textarea id="message" type="text" name="message" rows="6" tabindex="3" required placeholder="Message"></textarea><br><br>
+                              <span id="error-message" class="text-danger col-md-12"></span>
+                              <span id="success-message" class="text-success col-md-12"></span>
+                             <input class="btn btn-box" id="submit" name="submit" type="submit" value="Send">
                               </form>
-                              </div>
+                         </div>
 
 
 
@@ -194,6 +193,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -204,7 +204,9 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+     <script src="submit.js">
 
+     </script>
 </body>
 
 </html>
