@@ -34,7 +34,7 @@
     <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-
+     <script src="js/submit.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -159,39 +159,38 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Contact</h1>
-                    <div id="" class="col-lg-6">
-                         <p class="">Hello! this is where some linked icons go</p>
-
-
-
-
-
-                    </div>
-
-                         <div class="col-lg-6" id="mainform">
-                              <form method="post" enctype="multipart/form-data" class="contact">
-                              Name:<br>
-                              <input type="text" name="yourname" id="yourname" tabindex="1" required autofocus placeholder="Your Name"><br>
-                              E-mail:<br>
-                              <input type="email" name="email" id="email" tabindex="2" required placeholder="Your E-Mail"><br>
-                              Comment:<br>
-                              <textarea id="message" type="text" name="message" rows="6" tabindex="3" required placeholder="Message"></textarea><br><br>
-                              <span id="error-message" class="text-danger col-md-12"></span>
-                              <span id="success-message" class="text-success col-md-12"></span>
-                             <input class="btn btn-box" id="submit" name="submit" type="submit" value="Send">
-                              </form>
-                         </div>
+                    <div class="container main-container">
+                       <div class="col-md-6">
+                           <form class="contact" method="post" enctype="multipart/form-data">
+                               <div class="row">
+                                   <div class="col-md-6">
+                                       <div class="input-contact">
+                                           <input id="yourname" type="text" name="yourname" placeholder="Your Name" tabindex="1" required autofocus>
+                                       </div>
+                                   </div>
+                                   <div class="col-md-6">
+                                       <div class="input-contact">
+                                           <input id="email" type="email" name="email" placeholder="Your Email" tabindex="2" required>
+                                       </div>
+                                   </div>
+                                   <div class="col-md-12">
+                                       <div class="textarea-contact">
+                                           <textarea id="message" name="message" placeholder="Message" tabindex="3" required></textarea>
+                                       </div>
+                                   </div>
+                                   <span id="error-message" class="text-danger col-md-12"></span>
+                                   <span id="success-message" class="text-success col-md-12"></span>
+                                   <div class="col-md-12">
+                                       <input class="btn btn-box" id="submit" name="submit" type="submit" value="Send">
+                                   </div>
+                               </div>
+                           </form>
+                       </div>
 
 
 
 
                 </div>
-            </div>
-        </div>
     </section>
 
 
@@ -204,7 +203,7 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
-     <script src="js/submit.js"></script>
+
 </body>
 
 </html>
