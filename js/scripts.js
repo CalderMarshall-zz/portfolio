@@ -1,4 +1,4 @@
-(window).load(function() {
+$(window).load(function() {
      // input
     $(".input-contact input, .textarea-contact textarea").focus(function () {
         $(this).next("span").addClass("active");
