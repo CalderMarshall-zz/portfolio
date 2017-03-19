@@ -13,7 +13,7 @@ if(isset($_POST['yourname'], $_POST['email'], $_POST['message'])) {
     $email=$_POST['email'];
     $message=$_POST['message'];
     $body = "From: $yourname\nE-Mail: $email\nMessage: $message";
-    $to = 'burdickbrett@gmail.com';
+    $to = 'cmarshall72@gmail.com';
     $from = 'From: caldermarshall.com';
     $subject = 'Email Inquiry from Web Portfolio';
     $sent = mail($to, $subject, $body, $from);
