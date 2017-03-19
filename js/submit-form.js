@@ -1,7 +1,5 @@
 $(document).ready(function() {
 	// whoosh sound when email is sent
-	var mailSound = document.getElementById('mailSound');
-		mailSound.src = '../sounds/mailsent.wav';
 	// send form data to php script with AJAX
 	$('#submit').click(function(event){
 		event.preventDefault();
@@ -31,7 +29,6 @@ $(document).ready(function() {
 
 				}
 			});
-			mailSound.play();
 		}
 		return false;
 	});
