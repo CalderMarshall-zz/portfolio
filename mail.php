@@ -20,9 +20,9 @@ if(isset($_POST['yourname'], $_POST['email'], $_POST['message'])) {
 }
 
 if ($sent) {
-    echo 'Message sent. Thank you '.$yourname.'!';
+    echo json_encode(array('status' => 'success'));
 } else {
-    echo 'Oops! An error occurred. Try sending your message again.';
+   echo json_encode(array('status' => 'error'));
 }
 
 
