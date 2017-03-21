@@ -45,10 +45,9 @@ html {
 }
 /*about section*/
 .about-section {
-     border-top: 25px solid #5E3F0E;
     padding-top: 10vh;
     text-align: center;
-    background-color: rgb(115, 147, 114);
+    background-color: #CFC5A1;
     color: black;
     padding-bottom: 10vh;
     font-size: 1.2em;
@@ -80,7 +79,7 @@ html {
     height: 100%;
     padding-top: 10vh;
     text-align: center;
-    background: #fff;
+    background-color: rgb(162, 155, 163);
 }
 
 .contact-section {
@@ -89,6 +88,7 @@ html {
     text-align: center;
     background: #eee;
     padding-bottom: 10px;
+    background-color: rgb(111, 115, 113);
 }
 #emailform {
      width: 37vw;
