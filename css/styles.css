@@ -73,6 +73,11 @@ html {
      height: 12.5vh;
      padding: 3%;
 }
+/*fun icon styling*/
+.funicon{
+     height: 10vh;
+     padding: 3%;
+}
 
 
 .projects-section {
