@@ -79,7 +79,7 @@ html {
     height: 100%;
     padding-top: 10vh;
     text-align: center;
-    background-color: rgb(162, 155, 163);
+    background-color: #DBC594;
 }
 
 .contact-section {
@@ -88,7 +88,7 @@ html {
     text-align: center;
     background: #eee;
     padding-bottom: 10px;
-    background-color: rgb(111, 115, 113);
+    background-color: #DEBE85;
 }
 #emailform {
      width: 37vw;
