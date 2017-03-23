@@ -45,7 +45,7 @@ html {
 }
 /*about section*/
 .about-section {
-    padding-top: 10vh;
+    padding-top: 8vh;
     text-align: center;
     background-color: #CFC5A1;
     color: black;
@@ -57,9 +57,8 @@ html {
 /*description paragraph*/
 .about-section #leftabout {
      /*background-color: rgb(147, 139, 89);*/
-     padding: 8vh 2vh;
+     padding: 1%;
      /*border: 2px solid black;*/
-     border-radius: 5%;
 }
 
 .aboutlink {
@@ -82,18 +81,31 @@ html {
 
 .projects-section {
     height: 100%;
-    padding-top: 10vh;
+    padding-top: 5vh;
     text-align: center;
-    background-color: #DBC594;
+    background-color: #CFC5A1;
+}
+#blacktable{
+     padding-bottom: 5px;
+}
+#parkimg{
+     padding-top: 4vh;
+     padding-bottom: 5px;
+}
+.projectlink {
+     color: rgb(92, 70, 48);
+}
+.projectlink:hover {
+     color: rgb(223, 99, 66);
 }
 
 .contact-section {
     height: 100%;
-    padding-top: 10vh;
+    padding-top: 7vh;
     text-align: center;
     background: #eee;
     padding-bottom: 10px;
-    background-color: #DEBE85;
+    background-color: #CFC5A1;
 }
 #emailform {
      width: 37vw;
