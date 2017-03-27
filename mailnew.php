@@ -5,17 +5,17 @@ if(!isset($_POST['submit']))
 {
 	echo "error; you need to submit the form!";
 }
-$name = $_POST['yourname'];
-$visitor_email = $_POST['email'];
+$yourname = $_POST['yourname'];
+$email = $_POST['email'];
 $message = $_POST['message'];
 
-if(empty($name)||empty($visitor_email))
+if(empty($name)||empty($email))
 {
     echo "Name and email are mandatory!";
     exit;
 }
 
-if(IsInjected($visitor_email))
+if(IsInjected($email))
 {
     echo "Bad email value!";
     exit;
@@ -24,12 +24,12 @@ if(IsInjected($visitor_email))
 
 // Send email
 $email_subject = "New message from your website!";
-$email_body = "You have received a new message from $name.\n".
+$email_body = "You have received a new message from $yourname.\n".
 $email_body .= "Here is the message: \n $message".
 $to = "cmarshall72@gmail.com";
 
-mail($to, $email_subject, $email_body, "From: " .$visitor_email);
-header('Location: index.html');
+mail($to, $email_subject, $email_body, "From: " .$email);
+
 
 
 
