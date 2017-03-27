@@ -17,19 +17,15 @@ $(document).ready(function() {
 		}
 		else {
 			$('#error-message').html(' ');
-			$.ajax({
-				type: 'POST',
-				url: '../mailnew.php',
-				data: formData,
-				success: function(response){
+
 					$('input[type=text], input[type=email], textarea').val(' ');
 					$('#success-message').fadeIn().html("Success!");
 					console.log("success function");
 					setTimeout(function(){
 						$('#success-message').fadeOut('slow');
 					}, 5000);
-				}
-			});
+
+
 		}
 		return false;
 	});
