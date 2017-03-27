@@ -1,32 +1,49 @@
-$(document).ready(function() {
-	// whoosh sound when email is sent
-	// send form data to php script with AJAX
-	$('#submit').click(function(event){
-		event.preventDefault();
-		var yourname = $('#yourname').val();
-		var email = $('#email').val();
-		var message = $('#message').val();
-		var formData = {yourname: yourname, email: email, message: message};
-		console.log(formData);
+$(function() {
 
-		if (yourname === "" || email === "" || message === ""){
-			$('#error-message').fadeIn().html('All fields are required');
-			setTimeout(function(){
-				$('#error-message').fadeOut('slow');
-			}, 4000);
-		}
-		else {
-			$('#error-message').html(' ');
+	// Get the form.
+	var form = $('#ajax-contact');
 
-					$('input[type=text], input[type=email], textarea').val(' ');
-					$('#success-message').fadeIn().html("Success!");
-					console.log("success function");
-					setTimeout(function(){
-						$('#success-message').fadeOut('slow');
-					}, 5000);
+	// Get the messages div.
+	var formMessages = $('#form-messages');
 
+	// Set up an event listener for the contact form.
+	$(form).submit(function(e) {
+		// Stop the browser from submitting the form.
+		e.preventDefault();
 
-		}
-		return false;
+		// Serialize the form data.
+		var formData = $(form).serialize();
+
+		// Submit the form using AJAX.
+		$.ajax({
+			type: 'POST',
+			url: $(form).attr('action'),
+			data: formData
+		})
+		.done(function(response) {
+			// Make sure that the formMessages div has the 'success' class.
+			$(formMessages).removeClass('error');
+			$(formMessages).addClass('success');
+
+			// Set the message text.
+			$(formMessages).text(response);
+
+			// Clear the form.
+			$('#name, #email, #message').val('');
+		})
+		.fail(function(data) {
+			// Make sure that the formMessages div has the 'error' class.
+			$(formMessages).removeClass('success');
+			$(formMessages).addClass('error');
+
+			// Set the message text.
+			if (data.responseText !== '') {
+				$(formMessages).text(data.responseText);
+			} else {
+				$(formMessages).text('Oops! An error occured and your message could not be sent.');
+			}
+		});
+
 	});
+
 });
