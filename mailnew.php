@@ -9,7 +9,7 @@ $yourname = $_POST['yourname'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 
-if(empty($name)||empty($email))
+if(empty($yourname)||empty($email))
 {
     echo "Name and email are mandatory!";
     exit;
