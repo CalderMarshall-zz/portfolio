@@ -61,6 +61,17 @@ html {
      /*border: 2px solid black;*/
 }
 
+.about-section #rightabout .abouticondiv .abouticon {
+     height: 12.5vh;
+     padding: 3%;
+}
+.about-section #rightabout {
+     padding-top: 2%;
+}
+.abouticondiv {
+     display: inline-block;
+}
+
 .aboutlink {
      color: rgb(223, 92, 28);
 
@@ -69,8 +80,7 @@ html {
 
 /*about icon styling*/
 .abouticon{
-     height: 12.5vh;
-     padding: 3%;
+
 }
 /*fun icon styling*/
 .funicon{
