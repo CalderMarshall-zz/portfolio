@@ -78,10 +78,8 @@ html {
 }
 
 
-/*about icon styling*/
-.abouticon{
 
-}
+
 /*fun icon styling*/
 .funicon{
      height: 10vh;
@@ -94,6 +92,10 @@ html {
     padding-top: 5vh;
     text-align: center;
     background-color: #CFC5A1;
+}
+.project_div {
+     display: inline-block;
+     padding: 3%;
 }
 #blacktable{
      padding-bottom: 5px;
