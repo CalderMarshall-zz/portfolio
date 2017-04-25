@@ -17,7 +17,7 @@
         }
 
         // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
+        // FIXME:
         $recipient = "cmarshall72@gmail.com";
 
         // Set the email subject.
@@ -43,7 +43,7 @@
         }
 
     } else {
-        // Not a POST request, set a 403 (forbidden) response code.
+        //set a 403 (forbidden) response code.
         http_response_code(403);
         echo "There was a problem with your submission, please try again.";
     }
