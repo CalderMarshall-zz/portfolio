@@ -90,7 +90,7 @@ html {
 
 
 .projects-section {
-    height: 100%;
+    height: auto;
     padding-top: 10vh;
     text-align: center;
     background-color: #CFC5A1;
