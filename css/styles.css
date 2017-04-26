@@ -276,11 +276,11 @@ button {
   margin: 0;
   text-align: center;
 }
-#send-button{
+/*#send-button{
      width: 100%;
      background-color: black;
      color: grey;
-}
+}*/
 
 button:hover, button:focus {
   opacity: 0.75;
