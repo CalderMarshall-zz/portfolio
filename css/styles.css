@@ -84,8 +84,11 @@ html {
 
 /*fun icon styling*/
 .funicon{
-     height: 10vh;
+     height: 12vh;
      padding: 3%;
+}
+.funpic{
+    height: 14vh;
 }
 
 
